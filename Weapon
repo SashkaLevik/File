@@ -1,0 +1,31 @@
+public class Weapon : MonoBehaviour
+{
+    private int _damage;
+    private int _bullets;
+
+    public void Fire(Player player)
+    {
+        _bullets -= 1;
+        player.TakeDamage(_damage);
+    }
+}
+
+public class Player : MonoBehaviour
+{
+    private int _health;
+
+    public void TakeDamage(int damage)
+    {
+        _health -= damage;
+    }
+}
+
+public class Bot : MonoBehaviour
+{
+    private Weapon _weapon;
+
+    public void OnSeePlayer(Player player)
+    {
+        _weapon.Fire(player);
+    }
+}
