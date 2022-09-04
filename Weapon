@@ -1,4 +1,4 @@
-public class Weapon : MonoBehaviour
+class Weapon
 {
     private int _damage;
     private int _bullets;
@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     }
 }
 
-public class Player : MonoBehaviour
+class Player 
 {
     private int _health;
 
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     }
 }
 
-public class Bot : MonoBehaviour
+class Bot 
 {
     private Weapon _weapon;
 
